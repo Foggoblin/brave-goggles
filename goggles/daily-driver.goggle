@@ -1,7 +1,7 @@
 ! name: Daily Driver
 ! description: General-purpose search. Discards the worst everyday spam (listicle/SEO farms, fake fix sites), downranks lesser offenders, and boosts trustworthy troubleshooting/reference/review sources.
 ! public: false
-! author: Mark
+! author: Foggoblin
 
 ! ---------------------------------------------------------------------------
 ! Philosophy: not a narrow topic Goggle -- meant to be the default driver for

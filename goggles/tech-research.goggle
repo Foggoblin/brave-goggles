@@ -1,7 +1,7 @@
 ! name: Tech Research
 ! description: Boosts developer/technical sources (official docs, GitHub, Stack Overflow, HN-adjacent sites, relevant forums/Reddit) and downranks low-effort tutorial-mill / copycat sites. For programming, sysadmin, and general technical research queries.
 ! public: false
-! author: Mark
+! author: Foggoblin
 
 ! ---------------------------------------------------------------------------
 ! Philosophy: strong boosts for primary/authoritative sources (official docs,
