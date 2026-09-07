@@ -48,11 +48,13 @@ $downrank=1,site=w3schools.com
 ! =====================================
 ! For "how to fix..." queries: forces real humans and actual forums/repos to
 ! the top instead of fake blogs.
-$boost=8,site=reddit.com
-$boost=8,site=stackoverflow.com
-$boost=8,site=stackexchange.com
-$boost=7,site=github.com
-$boost=7,site=ifixit.com
+! Commented out for testing daily-driver without it -- use tech-research.goggle
+! or another dedicated Goggle for troubleshooting instead.
+! $boost=8,site=reddit.com
+! $boost=8,site=stackoverflow.com
+! $boost=8,site=stackexchange.com
+! $boost=7,site=github.com
+! $boost=7,site=ifixit.com
 
 ! =====================================
 ! 4. BOOST -- trusted reviews & tech
@@ -76,18 +78,20 @@ $boost=5,site=goodreads.com
 ! =====================================
 ! Established outlets with actual reporting, favored over aggregators and
 ! SEO-optimized "news" rewrite sites.
-$boost=6,site=cbc.ca
-$boost=6,site=bbc.com
-$boost=6,site=nytimes.com
-$boost=6,site=aljazeera.com
+! Commented out for testing daily-driver without it -- use news.goggle
+! instead for news queries.
+! $boost=6,site=cbc.ca
+! $boost=6,site=bbc.com
+! $boost=6,site=nytimes.com
+! $boost=6,site=aljazeera.com
 
 ! Canadian & international editorial/opinion outlets
-$boost=5,site=theglobeandmail.com
-$boost=5,site=macleans.ca
-$boost=5,site=thewalrus.ca
-$boost=5,site=thetyee.ca
-$boost=5,site=thestar.com
-$boost=5,site=economist.com
+! $boost=5,site=theglobeandmail.com
+! $boost=5,site=macleans.ca
+! $boost=5,site=thewalrus.ca
+! $boost=5,site=thetyee.ca
+! $boost=5,site=thestar.com
+! $boost=5,site=economist.com
 
 ! =====================================
 ! 7. BOOST -- canada: government & official sources
