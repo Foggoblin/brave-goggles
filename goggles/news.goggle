@@ -11,21 +11,29 @@
 ! for now it's a general-purpose light nudge, open recall.
 ! ---------------------------------------------------------------------------
 
-! --- Trusted outlets (boost) ------------------------------------------------
-$boost=3,site=theguardian.com
+! =====================================
+! 1. Trusted Outlets
+! =====================================
+! Major outlets with actual reporting, favored over aggregators and
+! SEO-optimized "news" rewrite sites.
+$boost=5,site=theguardian.com
+$boost=5,site=bbc.com
+$boost=5,site=nytimes.com
+$boost=5,site=aljazeera.com
 
-! --- Wire-service / major outlets ------------------------------------------
+! =====================================
+! 2. Editorial/Opinion Outlets
+! =====================================
+$boost=4,site=economist.com
+$boost=4,site=macleans.ca
+$boost=4,site=thewalrus.ca
+
+! =====================================
+! 3. Canadian Outlets
+! =====================================
 $boost=6,site=cbc.ca
-$boost=6,site=bbc.com
-$boost=6,site=nytimes.com
-$boost=6,site=aljazeera.com
-
-! --- Canadian & international editorial/opinion outlets --------------------
 $boost=5,site=theglobeandmail.com
-$boost=5,site=macleans.ca
-$boost=5,site=thewalrus.ca
 $boost=5,site=thetyee.ca
 $boost=5,site=thestar.com
-$boost=5,site=economist.com
 
 ! --- Add more entries below as you identify them ---------------------------
