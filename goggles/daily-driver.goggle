@@ -106,4 +106,10 @@ $boost=6,site=gc.ca
 $boost=5,site=parl.ca
 $boost=5,site=bankofcanada.ca
 
+! --- BC provincial & official sources --------------------------------------
+$boost=6,site=gov.bc.ca
+$boost=6,site=worksafebc.com
+$boost=5,site=icbc.com
+$boost=5,site=healthlinkbc.ca
+
 ! --- Add more entries below as you identify them -------------------------
