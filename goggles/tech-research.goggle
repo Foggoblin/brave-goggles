@@ -1,0 +1,67 @@
+! name: Tech Research
+! description: Boosts developer/technical sources (official docs, GitHub, Stack Overflow, HN-adjacent sites, relevant forums/Reddit) and downranks low-effort tutorial-mill / copycat sites. For programming, sysadmin, and general technical research queries.
+! public: false
+! author: Mark
+
+! ---------------------------------------------------------------------------
+! Philosophy: strong boosts for primary/authoritative sources (official docs,
+! source repos, canonical Q&A), lighter boosts for good community discussion,
+! and downranks/discards for sites that scrape or repackage that content for
+! SEO. Not a closed Goggle — no leading generic $discard — since technical
+! answers can live on long-tail blogs not listed here.
+! ---------------------------------------------------------------------------
+
+! --- Official docs & language/runtime sites (strong boost) ---------------
+$boost=3,site=developer.mozilla.org
+$boost=3,site=docs.python.org
+$boost=3,site=doc.rust-lang.org
+$boost=3,site=go.dev
+$boost=3,site=learn.microsoft.com
+$boost=3,site=man7.org
+$boost=3,site=kubernetes.io
+$boost=3,site=archwiki.org
+
+! --- Code hosting / canonical source (strong boost) -----------------------
+$boost=3,site=github.com
+$boost=2,site=gitlab.com
+$boost=2,site=sourcehut.org
+
+! --- Canonical Q&A (strong boost) -----------------------------------------
+$boost=3,site=stackoverflow.com
+$boost=2,site=serverfault.com
+$boost=2,site=superuser.com
+$boost=2,site=unix.stackexchange.com
+$boost=2,site=askubuntu.com
+
+! --- HN-adjacent / technical community discussion (moderate boost) -------
+$boost=2,site=news.ycombinator.com
+$boost=1,site=lobste.rs
+$boost=1,site=lwn.net
+
+! --- Relevant forums / Reddit (light boost) -------------------------------
+! Add specific subreddits as inurl patterns since $site can't scope to a
+! subreddit path alone -- pattern-match the /r/<sub>/ path instead.
+/r/programming/$boost=1
+/r/selfhosted/$boost=1
+/r/homelab/$boost=1
+/r/linux/$boost=1
+$boost=1,site=discourse.org
+
+! --- Downrank: tutorial mills / SEO-optimized rehashes --------------------
+$downrank=2,site=w3schools.com
+$downrank=2,site=geeksforgeeks.org
+$downrank=2,site=tutorialspoint.com
+$downrank=1,site=javatpoint.com
+
+! --- Discard: known Stack Overflow / GitHub scraper mirrors ---------------
+! (non-exhaustive placeholder list -- see the "Copycats removal" example
+! Goggle in brave/goggles-quickstart for a much larger reference list to
+! merge in: https://github.com/brave/goggles-quickstart/blob/main/goggles/copycats_removal.goggle)
+$discard,site=itectec.com
+$discard,site=qastack.com
+$discard,site=coderedirect.com
+$discard,site=exceptionshub.com
+$discard,site=githubmemory.com
+$discard,site=gitmemory.com
+
+! --- Add more entries below as you identify them --------------------------

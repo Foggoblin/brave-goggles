@@ -1,0 +1,15 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editor cruft
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Local scratch / drafts not meant for the repo
+*.local
+scratch/
+drafts/

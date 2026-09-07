@@ -1,0 +1,33 @@
+! name: Daily Driver
+! description: Light-touch general search. Downranks SEO/content-farm domains and low-value aggregator/scraper sites, without hiding anything outright. Meant to be used for everyday search, not a narrow topic Goggle.
+! public: false
+! author: Mark
+
+! ---------------------------------------------------------------------------
+! Philosophy: this is NOT a $discard-everything-then-boost Goggle. The goal
+! is to nudge the default Brave ranking away from known SEO spam and
+! content-farm domains, while leaving recall wide open for everything else.
+! Strengths are kept low (1-2) so this stays "light touch" rather than a
+! full block-list.
+! ---------------------------------------------------------------------------
+
+! --- SEO / content-farm / listicle mills ---------------------------------
+! TODO: fill in with domains you personally keep bouncing off of. Starting
+! placeholders below — replace/expand as you notice patterns while browsing.
+$downrank=2,site=pinterest.com
+$downrank=2,site=quora.com
+$downrank=1,site=answers.com
+
+! --- Low-effort "SEO-optimized" tutorial/listicle aggregators ------------
+! These often reword/scrape better sources for search ranking purposes.
+$downrank=2,site=geeksforgeeks.org
+$downrank=1,site=w3schools.com
+
+! --- Copycat / scraped Stack Overflow & GitHub mirrors -------------------
+! See tech-research.goggle for a more thorough version of this list; a
+! couple of the worst offenders are downranked here too since they pollute
+! general search, not just technical search.
+$downrank=3,site=itectec.com
+$downrank=3,site=qastack.com
+
+! --- Add more entries below as you identify them -------------------------
