@@ -1,33 +1,109 @@
 ! name: Daily Driver
-! description: Light-touch general search. Downranks SEO/content-farm domains and low-value aggregator/scraper sites, without hiding anything outright. Meant to be used for everyday search, not a narrow topic Goggle.
+! description: General-purpose search. Discards the worst everyday spam (listicle/SEO farms, fake fix sites), downranks lesser offenders, and boosts trustworthy troubleshooting/reference/review sources.
 ! public: false
 ! author: Mark
 
 ! ---------------------------------------------------------------------------
-! Philosophy: this is NOT a $discard-everything-then-boost Goggle. The goal
-! is to nudge the default Brave ranking away from known SEO spam and
-! content-farm domains, while leaving recall wide open for everything else.
-! Strengths are kept low (1-2) so this stays "light touch" rather than a
-! full block-list.
+! Philosophy: not a narrow topic Goggle -- meant to be the default driver for
+! everyday search. Uses the full toolkit (discard/downrank/boost) rather than
+! staying downrank-only: the worst repeat-offender domains are discarded
+! outright, weaker offenders are downranked, and a handful of consistently
+! good sources (real forums, hands-on reviews, reference sites) get boosted
+! so they surface ahead of SEO noise without needing a closed/allowlist
+! Goggle. No leading generic $discard, so recall stays open for everything
+! not explicitly listed here.
 ! ---------------------------------------------------------------------------
 
-! --- SEO / content-farm / listicle mills ---------------------------------
-! TODO: fill in with domains you personally keep bouncing off of. Starting
-! placeholders below — replace/expand as you notice patterns while browsing.
-$downrank=2,site=pinterest.com
-$downrank=2,site=quora.com
-$downrank=1,site=answers.com
+! =====================================
+! 1. DISCARD -- worst everyday offenders
+! =====================================
+! Fake tech-fix sites, image-loop/clickbait content, AI-generated listicles,
+! and scraped SO/GitHub mirrors that add nothing over the original source.
+$discard,site=pinterest.com
+$discard,site=quora.com
+$discard,site=ehow.com
+$discard,site=wikihow.com
+$discard,site=screenrant.com
+$discard,site=cbr.com
+$discard,site=softonic.com
+$discard,site=fandom.com
+$discard,site=cnet.com
 
-! --- Low-effort "SEO-optimized" tutorial/listicle aggregators ------------
-! These often reword/scrape better sources for search ranking purposes.
+! Scraped Stack Overflow / GitHub mirrors (see tech-research.goggle for the
+! more thorough technical-search version of this list)
+$discard,site=itectec.com
+$discard,site=qastack.com
+
+! =====================================
+! 2. DOWNRANK -- lesser SEO/content-farm/tutorial-mill offenders
+! =====================================
+! Not bad enough to discard outright, but reliably lower-quality than
+! competing results for the same query.
+$downrank=1,site=answers.com
 $downrank=2,site=geeksforgeeks.org
 $downrank=1,site=w3schools.com
 
-! --- Copycat / scraped Stack Overflow & GitHub mirrors -------------------
-! See tech-research.goggle for a more thorough version of this list; a
-! couple of the worst offenders are downranked here too since they pollute
-! general search, not just technical search.
-$downrank=3,site=itectec.com
-$downrank=3,site=qastack.com
+! =====================================
+! 3. BOOST -- troubleshooting heroes
+! =====================================
+! For "how to fix..." queries: forces real humans and actual forums/repos to
+! the top instead of fake blogs.
+$boost=8,site=reddit.com
+$boost=8,site=stackoverflow.com
+$boost=8,site=stackexchange.com
+$boost=7,site=github.com
+$boost=7,site=ifixit.com
+
+! =====================================
+! 4. BOOST -- trusted reviews & tech
+! =====================================
+! For shopping/gear research: boosts sites that do real, physical testing
+! over affiliate-link spammers.
+$boost=6,site=rtings.com
+$boost=5,site=gsmarena.com
+$boost=5,site=theverge.com
+
+! =====================================
+! 5. BOOST -- everyday reference
+! =====================================
+! Keeps standard, quick-reference sites highly visible.
+$boost=6,site=wikipedia.org
+$boost=5,site=imdb.com
+$boost=5,site=goodreads.com
+
+! =====================================
+! 6. BOOST -- news (wire-service / major outlets)
+! =====================================
+! Established outlets with actual reporting, favored over aggregators and
+! SEO-optimized "news" rewrite sites.
+$boost=6,site=cbc.ca
+$boost=6,site=bbc.com
+$boost=6,site=nytimes.com
+$boost=6,site=aljazeera.com
+
+! Canadian & international editorial/opinion outlets
+$boost=5,site=theglobeandmail.com
+$boost=5,site=macleans.ca
+$boost=5,site=thewalrus.ca
+$boost=5,site=thetyee.ca
+$boost=5,site=thestar.com
+$boost=5,site=economist.com
+
+! =====================================
+! 7. BOOST -- canada: government & official sources
+! =====================================
+! For queries about benefits, taxes, immigration, statistics, law, etc.
+! Starting with federal sources; add provincial ones (ontario.ca,
+! gov.bc.ca, alberta.ca, quebec.ca, ...) as needed.
+!
+! Note: `site=gc.ca` is included as a catch-all since most federal
+! department sites are subdomains of gc.ca (e.g. cra-arc.gc.ca,
+! statcan.gc.ca, ised-isde.gc.ca) -- confirm in practice that Brave's
+! `site=` matches subdomains and not just the exact hostname, and adjust
+! to explicit subdomains below if it doesn't.
+$boost=6,site=canada.ca
+$boost=6,site=gc.ca
+$boost=5,site=parl.ca
+$boost=5,site=bankofcanada.ca
 
 ! --- Add more entries below as you identify them -------------------------

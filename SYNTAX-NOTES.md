@@ -58,6 +58,13 @@ used standalone.
 - Future/planned match targets: `$inurl`, `$intitle`, `$indescription`,
   `$incontent` (URL matching is what's implemented today).
 
+**Note on `$` position:** `$` always comes immediately after whatever pattern
+it modifies — `<pattern>$<options>`. A pure `site=` rule has no pattern, so
+`$` just ends up at the start of the line (`$boost=3,site=example.com`). A
+path-scoped rule has a pattern first, so `$` trails it
+(`/some/path/$boost=1`). This isn't inconsistent styling — it's just where
+the pattern happens to end on that particular line.
+
 ## Actions (`$boost` / `$downrank` / `$discard`)
 
 Every instruction has an implicit or explicit action. Default action (no

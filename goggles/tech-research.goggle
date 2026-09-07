@@ -41,19 +41,60 @@ $boost=1,site=lwn.net
 ! --- Relevant forums / Reddit (light boost) -------------------------------
 ! Add specific subreddits as inurl patterns since $site can't scope to a
 ! subreddit path alone -- pattern-match the /r/<sub>/ path instead.
-/r/programming/$boost=1
-/r/selfhosted/$boost=1
-/r/homelab/$boost=1
-/r/linux/$boost=1
+reddit.com/r/programming/$boost=1
+reddit.com/r/selfhosted/$boost=1
+reddit.com/r/homelab/$boost=1
+reddit.com/r/linux/$boost=1
 $boost=1,site=discourse.org
 
+! --- Arch/CachyOS/Wayland --------------------------------------------------
+$boost=3,site=wiki.archlinux.org
+$boost=2,site=aur.archlinux.org
+$boost=2,site=bbs.archlinux.org
+$boost=3,site=docs.cachyos.org
+reddit.com/r/archlinux/$boost=1
+reddit.com/r/CachyOS/$boost=1
+reddit.com/r/wayland/$boost=1
+reddit.com/r/niri/$boost=1
+reddit.com/r/hyprland/$boost=1
+reddit.com/r/unixporn/$boost=1
+
+! --- Framework hardware -----------------------------------------------------
+$boost=2,site=community.frame.work
+reddit.com/r/framework/$boost=1
+reddit.com/r/FrameworkLaptop/$boost=1
+
+! --- Homelab / self-hosting --------------------------------------------------
+$boost=2,site=forum.proxmox.com
+$boost=2,site=docs.linuxserver.io
+reddit.com/r/DataHoarder/$boost=1
+reddit.com/r/Proxmox/$boost=1
+reddit.com/r/synology/$boost=1
+reddit.com/r/docker/$boost=1
+reddit.com/r/Traefik/$boost=1
+
+! --- Networking --------------------------------------------------------------
+$boost=3,site=tailscale.com
+$boost=3,site=help.ui.com
+reddit.com/r/Tailscale/$boost=1
+reddit.com/r/AdGuardHome/$boost=1
+reddit.com/r/networking/$boost=1
+
+! --- Privacy / mobile ----------------------------------------------------------
+$boost=3,site=grapheneos.org
+reddit.com/r/GrapheneOS/$boost=1
+reddit.com/r/degoogle/$boost=1
+
+! --- Scripting / dev (subreddit only -- docs/QA sites already boosted above) -
+reddit.com/r/commandline/$boost=1
+
 ! --- Downrank: tutorial mills / SEO-optimized rehashes --------------------
-$downrank=2,site=w3schools.com
 $downrank=2,site=geeksforgeeks.org
 $downrank=2,site=tutorialspoint.com
 $downrank=1,site=javatpoint.com
 
-! --- Discard: known Stack Overflow / GitHub scraper mirrors ---------------
+! --- Discard: known Stack Overflow / GitHub scraper mirrors, spam, and
+! low-value content sites -------------------------------------------------
 ! (non-exhaustive placeholder list -- see the "Copycats removal" example
 ! Goggle in brave/goggles-quickstart for a much larger reference list to
 ! merge in: https://github.com/brave/goggles-quickstart/blob/main/goggles/copycats_removal.goggle)
@@ -63,5 +104,8 @@ $discard,site=coderedirect.com
 $discard,site=exceptionshub.com
 $discard,site=githubmemory.com
 $discard,site=gitmemory.com
+$discard,site=pinterest.com
+$discard,site=quora.com
+$discard,site=w3schools.com
 
 ! --- Add more entries below as you identify them --------------------------
