@@ -1,26 +1,31 @@
 ! name: News
-! description: Placeholder for a future news-curation Goggle. Not yet populated.
+! description: Boosts established news outlets with actual reporting over aggregators and SEO-optimized "news" rewrite sites.
 ! public: false
 ! author: Foggoblin
 
 ! ---------------------------------------------------------------------------
-! STUB -- this Goggle has no instructions yet.
-!
-! Intended purpose (fill in as decisions are made):
-!   - Curate/boost specific news outlets or wire services you trust,
-!     and/or downrank outlets known for low-quality aggregation,
-!     clickbait, or heavy paywalled-but-thin content.
-!   - Possibly discard pure content-aggregator/rewrite sites that just
-!     republish AP/Reuters wire copy under their own byline.
-!   - Consider whether this should be a "closed" Goggle (leading generic
-!     $discard + explicit $boost allowlist -- see SYNTAX-NOTES.md) if the
-!     goal is a tight, curated news source list rather than a light nudge.
-!   - Decide whether to split by topic (e.g. tech news vs. general news)
-!     or keep it general-purpose.
-!
-! No instructions below yet -- add $boost / $downrank / $discard rules once
-! the source list is decided.
+! Seeded from the "news" boost section of daily-driver.goggle, plus outlets
+! added directly here. Not yet decided whether this should become a "closed"
+! Goggle (leading generic $discard + explicit $boost allowlist -- see
+! SYNTAX-NOTES.md) or split by topic (e.g. tech news vs. general news) --
+! for now it's a general-purpose light nudge, open recall.
 ! ---------------------------------------------------------------------------
 
 ! --- Trusted outlets (boost) ------------------------------------------------
 $boost=3,site=theguardian.com
+
+! --- Wire-service / major outlets ------------------------------------------
+$boost=6,site=cbc.ca
+$boost=6,site=bbc.com
+$boost=6,site=nytimes.com
+$boost=6,site=aljazeera.com
+
+! --- Canadian & international editorial/opinion outlets --------------------
+$boost=5,site=theglobeandmail.com
+$boost=5,site=macleans.ca
+$boost=5,site=thewalrus.ca
+$boost=5,site=thetyee.ca
+$boost=5,site=thestar.com
+$boost=5,site=economist.com
+
+! --- Add more entries below as you identify them ---------------------------
