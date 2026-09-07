@@ -21,3 +21,6 @@
 ! No instructions below yet -- add $boost / $downrank / $discard rules once
 ! the source list is decided.
 ! ---------------------------------------------------------------------------
+
+! --- Trusted outlets (boost) ------------------------------------------------
+$boost=3,site=theguardian.com
