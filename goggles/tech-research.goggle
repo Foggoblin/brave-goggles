@@ -38,13 +38,19 @@ $boost=2,site=news.ycombinator.com
 $boost=1,site=lobste.rs
 $boost=1,site=lwn.net
 
-! --- Relevant forums / Reddit (light boost) -------------------------------
+! --- Relevant forums / Reddit ----------------------------------------------
 ! Add specific subreddits as inurl patterns since $site can't scope to a
-! subreddit path alone -- pattern-match the /r/<sub>/ path instead.
-reddit.com/r/programming/$boost=1
-reddit.com/r/selfhosted/$boost=1
-reddit.com/r/homelab/$boost=1
-reddit.com/r/linux/$boost=1
+! subreddit path alone -- pattern-match the reddit.com/r/<sub>/ path instead.
+! Baseline boost for any reddit.com page (real-world troubleshooting threads
+! consistently outrank source-code/doc hits for "why is X broken" queries);
+! specific relevant subreddits below are boosted higher still so they win
+! the precedence tie-break over both this baseline and github.com/etc.
+$boost=3,site=reddit.com
+
+reddit.com/r/programming/$boost=5
+reddit.com/r/selfhosted/$boost=5
+reddit.com/r/homelab/$boost=5
+reddit.com/r/linux/$boost=5
 $boost=1,site=discourse.org
 
 ! --- Arch/CachyOS/Wayland --------------------------------------------------
@@ -52,41 +58,41 @@ $boost=3,site=wiki.archlinux.org
 $boost=2,site=aur.archlinux.org
 $boost=2,site=bbs.archlinux.org
 $boost=3,site=docs.cachyos.org
-reddit.com/r/archlinux/$boost=1
-reddit.com/r/CachyOS/$boost=1
-reddit.com/r/wayland/$boost=1
-reddit.com/r/niri/$boost=1
-reddit.com/r/hyprland/$boost=1
-reddit.com/r/unixporn/$boost=1
+reddit.com/r/archlinux/$boost=5
+reddit.com/r/CachyOS/$boost=5
+reddit.com/r/wayland/$boost=5
+reddit.com/r/niri/$boost=5
+reddit.com/r/hyprland/$boost=5
+reddit.com/r/unixporn/$boost=5
 
 ! --- Framework hardware -----------------------------------------------------
 $boost=2,site=community.frame.work
-reddit.com/r/framework/$boost=1
-reddit.com/r/FrameworkLaptop/$boost=1
+reddit.com/r/framework/$boost=5
+reddit.com/r/FrameworkLaptop/$boost=5
 
 ! --- Homelab / self-hosting --------------------------------------------------
 $boost=2,site=forum.proxmox.com
 $boost=2,site=docs.linuxserver.io
-reddit.com/r/DataHoarder/$boost=1
-reddit.com/r/Proxmox/$boost=1
-reddit.com/r/synology/$boost=1
-reddit.com/r/docker/$boost=1
-reddit.com/r/Traefik/$boost=1
+reddit.com/r/DataHoarder/$boost=5
+reddit.com/r/Proxmox/$boost=5
+reddit.com/r/synology/$boost=5
+reddit.com/r/docker/$boost=5
+reddit.com/r/Traefik/$boost=5
 
 ! --- Networking --------------------------------------------------------------
 $boost=3,site=tailscale.com
 $boost=3,site=help.ui.com
-reddit.com/r/Tailscale/$boost=1
-reddit.com/r/AdGuardHome/$boost=1
-reddit.com/r/networking/$boost=1
+reddit.com/r/Tailscale/$boost=5
+reddit.com/r/AdGuardHome/$boost=5
+reddit.com/r/networking/$boost=5
 
 ! --- Privacy / mobile ----------------------------------------------------------
 $boost=3,site=grapheneos.org
-reddit.com/r/GrapheneOS/$boost=1
-reddit.com/r/degoogle/$boost=1
+reddit.com/r/GrapheneOS/$boost=5
+reddit.com/r/degoogle/$boost=5
 
 ! --- Scripting / dev (subreddit only -- docs/QA sites already boosted above) -
-reddit.com/r/commandline/$boost=1
+reddit.com/r/commandline/$boost=5
 
 ! --- Downrank: tutorial mills / SEO-optimized rehashes --------------------
 $downrank=2,site=geeksforgeeks.org
