@@ -28,8 +28,6 @@ $discard,site=cbr.com
 $discard,site=softonic.com
 $discard,site=fandom.com
 $discard,site=cnet.com
-$discard,site=facebook.com
-$discard,site=instagram.com
 
 ! Scraped Stack Overflow / GitHub mirrors (see tech-research.goggle for the
 ! more thorough technical-search version of this list)
@@ -113,5 +111,13 @@ $boost=6,site=gov.bc.ca
 $boost=6,site=worksafebc.com
 $boost=5,site=icbc.com
 $boost=5,site=healthlinkbc.ca
+
+! =====================================
+! 8. DISCARD -- personal annoyances
+! =====================================
+! Not spam/low-quality by any general measure -- just sites that are
+! consistently unwelcome in search results for you personally.
+$discard,site=facebook.com
+$discard,site=instagram.com
 
 ! --- Add more entries below as you identify them -------------------------
