@@ -25,6 +25,7 @@ $boost=3,site=archwiki.org
 $boost=3,site=github.com
 $boost=2,site=gitlab.com
 $boost=2,site=sourcehut.org
+$boost=2,site=codeberg.org
 
 ! --- Canonical Q&A (strong boost) -----------------------------------------
 $boost=3,site=stackoverflow.com
