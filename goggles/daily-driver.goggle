@@ -28,6 +28,8 @@ $discard,site=cbr.com
 $discard,site=softonic.com
 $discard,site=fandom.com
 $discard,site=cnet.com
+$discard,site=facebook.com
+$discard,site=instagram.com
 
 ! Scraped Stack Overflow / GitHub mirrors (see tech-research.goggle for the
 ! more thorough technical-search version of this list)
