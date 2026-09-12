@@ -44,20 +44,7 @@ $downrank=2,site=geeksforgeeks.org
 $downrank=1,site=w3schools.com
 
 ! =====================================
-! 3. BOOST -- troubleshooting heroes
-! =====================================
-! For "how to fix..." queries: forces real humans and actual forums/repos to
-! the top instead of fake blogs.
-! Commented out for testing daily-driver without it -- use tech-research.goggle
-! or another dedicated Goggle for troubleshooting instead.
-! $boost=8,site=reddit.com
-! $boost=8,site=stackoverflow.com
-! $boost=8,site=stackexchange.com
-! $boost=7,site=github.com
-! $boost=7,site=ifixit.com
-
-! =====================================
-! 4. BOOST -- trusted reviews & tech
+! 3. BOOST -- trusted reviews & tech
 ! =====================================
 ! For shopping/gear research: boosts sites that do real, physical testing
 ! over affiliate-link spammers.
@@ -66,35 +53,13 @@ $boost=5,site=gsmarena.com
 $boost=5,site=theverge.com
 
 ! =====================================
-! 5. BOOST -- everyday reference
+! 4. BOOST -- everyday reference
 ! =====================================
 ! Keeps standard, quick-reference sites highly visible.
-$boost=6,site=wikipedia.org
-$boost=5,site=imdb.com
-$boost=5,site=goodreads.com
+$boost=3,site=wikipedia.org
 
 ! =====================================
-! 6. BOOST -- news (wire-service / major outlets)
-! =====================================
-! Established outlets with actual reporting, favored over aggregators and
-! SEO-optimized "news" rewrite sites.
-! Commented out for testing daily-driver without it -- use news.goggle
-! instead for news queries.
-! $boost=6,site=cbc.ca
-! $boost=6,site=bbc.com
-! $boost=6,site=nytimes.com
-! $boost=6,site=aljazeera.com
-
-! Canadian & international editorial/opinion outlets
-! $boost=5,site=theglobeandmail.com
-! $boost=5,site=macleans.ca
-! $boost=5,site=thewalrus.ca
-! $boost=5,site=thetyee.ca
-! $boost=5,site=thestar.com
-! $boost=5,site=economist.com
-
-! =====================================
-! 7. BOOST -- canada: government & official sources
+! 5. BOOST -- canada: government & official sources
 ! =====================================
 ! For queries about benefits, taxes, immigration, statistics, law, etc.
 ! Starting with federal sources; add provincial ones (ontario.ca,
@@ -117,7 +82,7 @@ $boost=5,site=icbc.com
 $boost=5,site=healthlinkbc.ca
 
 ! =====================================
-! 8. DISCARD -- personal annoyances
+! 6. DISCARD -- personal annoyances
 ! =====================================
 ! Not spam/low-quality by any general measure -- just sites that are
 ! consistently unwelcome in search results for you personally.
