@@ -53,36 +53,7 @@ $boost=5,site=gsmarena.com
 $boost=5,site=theverge.com
 
 ! =====================================
-! 4. BOOST -- everyday reference
-! =====================================
-! Keeps standard, quick-reference sites highly visible.
-$boost=3,site=wikipedia.org
-
-! =====================================
-! 5. BOOST -- canada: government & official sources
-! =====================================
-! For queries about benefits, taxes, immigration, statistics, law, etc.
-! Starting with federal sources; add provincial ones (ontario.ca,
-! gov.bc.ca, alberta.ca, quebec.ca, ...) as needed.
-!
-! Note: `site=gc.ca` is included as a catch-all since most federal
-! department sites are subdomains of gc.ca (e.g. cra-arc.gc.ca,
-! statcan.gc.ca, ised-isde.gc.ca) -- confirm in practice that Brave's
-! `site=` matches subdomains and not just the exact hostname, and adjust
-! to explicit subdomains below if it doesn't.
-$boost=6,site=canada.ca
-$boost=6,site=gc.ca
-$boost=5,site=parl.ca
-$boost=5,site=bankofcanada.ca
-
-! --- BC provincial & official sources --------------------------------------
-$boost=6,site=gov.bc.ca
-$boost=6,site=worksafebc.com
-$boost=5,site=icbc.com
-$boost=5,site=healthlinkbc.ca
-
-! =====================================
-! 6. DISCARD -- personal annoyances
+! 4. DISCARD -- personal annoyances
 ! =====================================
 ! Not spam/low-quality by any general measure -- just sites that are
 ! consistently unwelcome in search results for you personally.
