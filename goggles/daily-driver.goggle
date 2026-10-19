@@ -1,17 +1,14 @@
 ! name: Daily Driver
-! description: General-purpose search. Discards the worst everyday spam (listicle/SEO farms, fake fix sites), downranks lesser offenders, and boosts trustworthy troubleshooting/reference/review sources.
+! description: General-purpose search. Discards the worst everyday spam (listicle/SEO farms, fake fix sites) and downranks lesser offenders.
 ! public: false
 ! author: Foggoblin
 
 ! ---------------------------------------------------------------------------
 ! Philosophy: not a narrow topic Goggle -- meant to be the default driver for
-! everyday search. Uses the full toolkit (discard/downrank/boost) rather than
-! staying downrank-only: the worst repeat-offender domains are discarded
-! outright, weaker offenders are downranked, and a handful of consistently
-! good sources (real forums, hands-on reviews, reference sites) get boosted
-! so they surface ahead of SEO noise without needing a closed/allowlist
-! Goggle. No leading generic $discard, so recall stays open for everything
-! not explicitly listed here.
+! everyday search. Discards and downranks rather than staying downrank-only:
+! the worst repeat-offender domains are discarded outright and weaker
+! offenders are downranked. No boosts, and no leading generic $discard, so
+! recall stays open for everything not explicitly listed here.
 ! ---------------------------------------------------------------------------
 
 ! =====================================
@@ -44,16 +41,7 @@ $downrank=2,site=geeksforgeeks.org
 $downrank=1,site=w3schools.com
 
 ! =====================================
-! 3. BOOST -- trusted reviews & tech
-! =====================================
-! For shopping/gear research: boosts sites that do real, physical testing
-! over affiliate-link spammers.
-$boost=6,site=rtings.com
-$boost=5,site=gsmarena.com
-$boost=5,site=theverge.com
-
-! =====================================
-! 4. DISCARD -- personal annoyances
+! 3. DISCARD -- personal annoyances
 ! =====================================
 ! Not spam/low-quality by any general measure -- just sites that are
 ! consistently unwelcome in search results for you personally.
