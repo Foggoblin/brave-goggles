@@ -55,3 +55,7 @@ All three currently have `! public: false` in their metadata — usable by
 anyone with the direct URL, but not listed on the
 [discovery page](https://search.brave.com/goggles/discover). Flip to `true`
 once a Goggle is polished enough to share.
+
+## License
+
+[MIT](./LICENSE)
